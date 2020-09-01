@@ -18,7 +18,10 @@ img7 = imread('../data/statue.png');
 
 %% Foreground mask
 
-fm=myForegroundMask(img7);
+[mask, fm]=myForegroundMask(img7);
+figure, image(img7),  title('Image 7'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(mask),  title('Mask'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(fm),  title('Masked Image'),colormap(myColorScale), colorbar, daspect([1 1 1]);
 
 %% myLinearContrastStretching
 
@@ -140,4 +143,5 @@ figure, image(new_2),  title('Small windowsize'),colormap(myColorScale), colorba
 figure, image(new_3),  title('Large windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
 figure, image(new_4),  title('Half threshold limit with tuned windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
 
+toc;
 toc;
