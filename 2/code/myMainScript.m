@@ -97,6 +97,7 @@ figure, image(new_2),  title('Small windowsize'),colormap(myColorScale), colorba
 figure, image(new_3),  title('Large windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
 figure, image(new_4),  title('Half threshold limit with tuned windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
 
+
 %image 2
 windowsizetuned = 30;
 windowsizelarge = 100;
@@ -128,6 +129,8 @@ figure, image(new_2),  title('Small windowsize'),colormap(myColorScale), colorba
 figure, image(new_3),  title('Large windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
 figure, image(new_4),  title('Half threshold limit with tuned windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
 
+
+
 %image 6
 windowsizetuned = 50;
 windowsizelarge = 100;
@@ -142,6 +145,8 @@ figure, image(new_1),  title('Tuned windowsize with tuned threshold'),colormap(m
 figure, image(new_2),  title('Small windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
 figure, image(new_3),  title('Large windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
 figure, image(new_4),  title('Half threshold limit with tuned windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+
+
 
 toc;
 toc;
