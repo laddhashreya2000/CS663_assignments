@@ -15,4 +15,4 @@ function out_img = myBiHistogramEqualization(img)
   [~, highMap] = histeq(high_img,256-medn);
   lookupTable = uint8([medn*lowMap(1:medn), 256*highMap(medn+1:end)]);
   out_img = intlut(img, lookupTable);
-  imwrite(out_img,'outt.png');
+%   imwrite(out_img,'outt.png');
