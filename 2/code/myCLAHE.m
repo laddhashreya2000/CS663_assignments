@@ -15,8 +15,6 @@ function out_image = myCLAHE(in_image, limit, windowsize)
             end
         end
     end
-    subplot(1,2,1); imshow(in_image); title('Input Image');daspect([1 1 1]);
-    subplot(1,2,2); imshow(out_image); title('Final Image'); daspect([1 1 1]);
 end
 
 function out = f(img,limit)
