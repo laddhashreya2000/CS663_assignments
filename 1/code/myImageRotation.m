@@ -21,6 +21,7 @@ function out_image = myImageRotation(in_image)
         end
     end
     out_image = uint8(out_image);
+    figure('Name','Rotated','NumberTitle','off')
     subplot(1,2,1); imshow(in_image); title('Original Image'); daspect([1 1 1]); colorbar;
     subplot(1,2,2); imshow(out_image); title('Rotated Image'); daspect([1 1 1]); colorbar;
 end

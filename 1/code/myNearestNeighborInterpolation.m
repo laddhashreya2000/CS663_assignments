@@ -22,6 +22,7 @@ function out_image = myNearestNeighborInterpolation(in_image)
     out_image = uint8(out_image);
     myNumOfColors = 200;
     myColorScale = [ [0:1/(myNumOfColors-1):1]',[0:1/(myNumOfColors-1):1]',[0:1/(myNumOfColors-1):1]' ];
+    figure('Name','Nearest Neighbor Interpolation','NumberTitle','off')
     subplot(1,2,1), imagesc(in_image); colormap (myColorScale);colormap gray;
     daspect ([1 1 1]); axis tight; colorbar;
     subplot(1,2,2); imagesc(out_image); colormap (myColorScale);colormap gray;
