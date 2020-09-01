@@ -38,9 +38,9 @@ myLinearContrastStretching3 = myLinearContrastStretching(img3);
 figure, image(img3),  title('Image 3'),colormap(myColorScale), colorbar, daspect([1 1 1]);
 figure, image(myLinearContrastStretching3),  title('Linear Contrast Stretching on Image 3'),colormap(myColorScale), colorbar, daspect([1 1 1]);
 
-myLinearContrastStretching3 = myLinearContrastStretching(img4);
-figure, image(img4),  title('Image 4'),colormap(myColorScale), colorbar, daspect([1 1 1]);
-figure, image(myLinearContrastStretching3),  title('Linear Contrast Stretching on Image 4'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+% myLinearContrastStretching3 = myLinearContrastStretching(img4);
+% figure, image(img4),  title('Image 4'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+% figure, image(myLinearContrastStretching3),  title('Linear Contrast Stretching on Image 4'),colormap(myColorScale), colorbar, daspect([1 1 1]);
 
 myLinearContrastStretching3 = myLinearContrastStretching(img5);
 figure, image(img5),  title('Image 5'),colormap(myColorScale), colorbar, daspect([1 1 1]);
