@@ -74,3 +74,70 @@ ret1=imread('../data/retina.png');
 ret_ref=imread('../data/retinaRef.png');
 
 hm=myHM(ret1, ret_ref);
+
+%%myCLAHE
+
+tic;
+
+%image 1
+windowsizetuned = 50;
+windowsizelarge = 100;
+windowsizesmall = 5;
+limit = 10;
+new_1 = myCLAHE(img1, limit, windowsizetuned);
+new_2 = myCLAHE(img1, limit, windowsizesmall);
+new_3 = myCLAHE(img1, limit, windowsizelarge);
+new_4 = myCLAHE(img1, limit/2, windowsizetuned);
+figure, image(img1),  title('Image 1'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_1),  title('Tuned windowsize with tuned threshold'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_2),  title('Small windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_3),  title('Large windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_4),  title('Half threshold limit with tuned windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+
+%image 2
+windowsizetuned = 30;
+windowsizelarge = 100;
+windowsizesmall = 5;
+limit = 20;
+new_1 = myCLAHE(img2, limit, windowsizetuned);
+new_2 = myCLAHE(img2, limit, windowsizesmall);
+new_3 = myCLAHE(img2, limit, windowsizelarge);
+new_4 = myCLAHE(img2, limit/2, windowsizetuned);
+figure, image(img2),  title('Image 2'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_1),  title('Tuned windowsize with tuned threshold'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_2),  title('Small windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_3),  title('Large windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_4),  title('Half threshold limit with tuned windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+
+
+%image 3
+windowsizetuned = 100;
+windowsizelarge = 200;
+windowsizesmall = 30;
+limit = 200;
+new_1 = myCLAHE(img3, limit, windowsizetuned);
+new_2 = myCLAHE(img3, limit, windowsizesmall);
+new_3 = myCLAHE(img3, limit, windowsizelarge);
+new_4 = myCLAHE(img3, limit/2, windowsizetuned);
+figure, image(img3),  title('Image 3'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_1),  title('Tuned windowsize with tuned threshold'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_2),  title('Small windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_3),  title('Large windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_4),  title('Half threshold limit with tuned windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+
+%image 6
+windowsizetuned = 50;
+windowsizelarge = 100;
+windowsizesmall = 5;
+limit = 100;
+new_1 = myCLAHE(img6, limit, windowsizetuned);
+new_2 = myCLAHE(img6, limit, windowsizesmall);
+new_3 = myCLAHE(img6, limit, windowsizelarge);
+new_4 = myCLAHE(img6, limit/2, windowsizetuned);
+figure, image(img6),  title('Image 6'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_1),  title('Tuned windowsize with tuned threshold'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_2),  title('Small windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_3),  title('Large windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+figure, image(new_4),  title('Half threshold limit with tuned windowsize'),colormap(myColorScale), colorbar, daspect([1 1 1]);
+
+toc;
