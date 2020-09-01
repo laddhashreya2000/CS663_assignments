@@ -14,7 +14,7 @@ function out_image = myForegroundMask(in_image)
             out_image(i,j) = in_image(i,j)*(mask(i,j)/255);
         end
     end
-    
+    out_image = uint8(out_image);
     myNumOfColors = 200;
     myColorScale = [ [0:1/(myNumOfColors-1):1]',[0:1/(myNumOfColors-1):1]',[0:1/(myNumOfColors-1):1]' ];
     subplot(1,3,1), imagesc(in_image); colormap (myColorScale);colormap gray;
