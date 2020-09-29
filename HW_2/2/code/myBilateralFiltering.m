@@ -1,5 +1,5 @@
 function [out_image,RMSD] = myBilateralFiltering(in_image,sig_space,sig_intensity)
-    %in_image = double(in_image); in_image = in_image/(max(max(in_image)));
+    in_image = double(in_image); in_image = in_image/(max(max(in_image)));
     [X,Y] = size(in_image);
     sig = 0.05*(max(max(in_image)) - min(min(in_image))); %standard deviation of gaussian noise
     corr_image = in_image + sig*randn(size(in_image)); %adding noise to the image
