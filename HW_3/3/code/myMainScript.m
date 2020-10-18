@@ -3,10 +3,11 @@
 tic;
 %% Your code here
 close all;
+
 im=imread('../data/flower.jpg');
 
-
-%im=imadjust(im,stretchlim(im),[0,1]);
+im2=imread('../data/bird.jpg');
+im2=imresize(im2, 0.5);
 
 figure, imshow(im)
 
@@ -16,10 +17,9 @@ y0=round(y0/2);
 % Point of interest
 poi=[y0,x0];
 
-intensity_thresh=20;
-
-hs=20;
-hr=40;
+intensity_thresh=40;
+hs=15;
+hr=20;
 knn=1000;
 num_iter=20;
 %out=myMeanShiftSegmentation(im, num_iter, hs, hr, knn);
