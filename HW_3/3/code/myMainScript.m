@@ -41,6 +41,7 @@ end
 
 cc = bwconncomp(bin_mask);
 
+mask=zeros(M,N);
 find=0;
 for i=1:size(cc.PixelIdxList,2)
     [row, column] = ind2sub([M,N], cc.PixelIdxList{1,i});
