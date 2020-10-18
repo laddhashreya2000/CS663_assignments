@@ -48,7 +48,7 @@ for i=1:size(cc.PixelIdxList,2)
     final_index=[row, column];
     for j=1:size(final_index,1)
         if (final_index(j,1)==y0 && final_index(j,2)==x0)
-            mask(final_index)=255;
+            mask(cc.PixelIdxList{1,i})=255;
             find=1;
             break;
         end
