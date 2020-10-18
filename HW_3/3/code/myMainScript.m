@@ -29,9 +29,12 @@ bin_mask=zeros(M,N);
 
 for i=1:M
     for j=1:N
-        
-        d=norm(reshape(out(y0,x0,:), [1,3])-reshape(out(i,j,:), [1,3]));
-        if(d<intensity_thresh)
+        bool0= (abs(double(out(y0,x0,1))-double(out(i,j,1)))<intensity_thresh);
+        bool1= (abs(double(out(y0,x0,2))-double(out(i,j,2)))<intensity_thresh);
+        bool2= (abs(double(out(y0,x0,3))-double(out(i,j,3)))<intensity_thresh);
+        bool=bool0 && bool1 && bool2;
+        %d=norm(reshape(out(y0,x0,:), [1,3])-reshape(out(i,j,:), [1,3]));
+        if(bool)
             bin_mask(i,j)=255;
         end
     end
