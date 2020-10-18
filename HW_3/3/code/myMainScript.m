@@ -22,7 +22,7 @@ hs=20;
 hr=40;
 knn=1000;
 num_iter=20;
-out=myMeanShiftSegmentation(im, num_iter, hs, hr, knn);
+%out=myMeanShiftSegmentation(im, num_iter, hs, hr, knn);
 
 [M, N, P]=size(out);
 bin_mask=zeros(M,N);
@@ -58,6 +58,7 @@ for i=1:size(cc.PixelIdxList,2)
     end 
 end
     
+mask = imfill(mask,'holes');
 figure, imshow(mask)
 
 toc;
