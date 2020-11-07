@@ -4,7 +4,7 @@ clear;
 tic;
 %% ORL using SVD
 
-dir='../images/ORL/';
+dir='../data/ORL/';
 
 [train, test]=read_orl(dir);
 
@@ -26,7 +26,7 @@ ylim([0 100])
 
 %% YALE All eigencoefficients
 
-path='../images/CroppedYale';
+path='../data/CroppedYale';
 
 [train, test]=read_yale(path);
 
