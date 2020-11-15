@@ -15,8 +15,8 @@ figure; imshow(J); title("Image J"); colorbar; colormap gray; axis on;
 [logf, inverse, row, col] = FFT(I, J);
 figure; imshow(logf);colorbar; colormap jet; title("Logarithm of the Fourier magnitude of the cross-power spectrum"); axis on;
 figure; imagesc(inverse); colorbar; colormap gray; title("Inverse Fourier transform of cross power spectrum"); axis on;
-fprintf("The row index is %d. ", row);
-fprintf("The column index is %d.", col);
+fprintf("The y index is %d. ", row);
+fprintf("The x index is %d.", col);
 disp(" ");
     
 %% With noise
@@ -27,7 +27,7 @@ figure; imagesc(J); title("Image J with noise"); colorbar; colormap gray; axis o
 [logf, inverse, row, col] = FFT(I, J);
 figure; imshow(logf);colorbar; colormap jet; title("Logarithm of the Fourier magnitude of the cross-power spectrum with noise"); axis on;
 figure; imagesc(inverse); colorbar; colormap gray; title("Inverse Fourier transform of cross power spectrum with noise"); axis on;
-fprintf("The row index is %d. ", row);
-fprintf("The column index is %d.", col);
+fprintf("The y index is %d. ", row);
+fprintf("The x index is %d.", col);
 disp(" ");
 toc;
